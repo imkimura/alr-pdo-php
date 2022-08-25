@@ -1,12 +1,12 @@
 <?php
 
 use Alura\Pdo\Domain\Model\Student;
-use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
+use Alura\Pdo\Infrastructure\Persistance\ConnectionCreator;
 use Alura\Pdo\Infrastructure\Repository\PdoStudentRepository;
 
 require_once 'vendor/autoload.php';
 
-$connection = ConnectionCreator::createConnection();
+$connection = ConnectionCreator::create();
 $studentRepository = new PdoStudentRepository($connection);
 
 // realizo processos de definição da turma

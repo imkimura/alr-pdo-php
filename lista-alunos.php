@@ -1,12 +1,12 @@
 <?php
 
 use Alura\Pdo\Domain\Model\Student;
-use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
+use Alura\Pdo\Infrastructure\Persistance\ConnectionCreator;
 use Alura\Pdo\Infrastructure\Repository\PdoStudentRepository;
 
 require_once 'vendor/autoload.php';
 
-$pdo = ConnectionCreator::createConnection();
+$pdo = ConnectionCreator::create();
 $repository = new PdoStudentRepository($pdo);
 $studentList = $repository->allStudents();
 
